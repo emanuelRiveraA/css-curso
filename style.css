@@ -1,10 +1,8 @@
 /* variables css */
 :root{
     --color:green;
-}
-
-ul *{
-    color: red;
+    --color_title1:purple;
+    --color_title2:yellow;
 }
 
 body{
@@ -13,6 +11,71 @@ body{
 }
 
 h1{
-    background: white;
+    /* background: white; */
     color:var(--color);
+}
+/* selectores agrupados */
+.title,
+.parrafo{
+    color: violet;
+}
+/* hijos directos */
+li > ul{
+    display: none;
+}
+/* selectores descendiente caso concreto */
+li:hover ul{
+    display: block;
+}
+
+
+/*  */
+.title-1{
+    color: var(--color_title1);
+}
+
+.title-2{
+    color: var(--color_title2);
+}
+
+.subtitle{
+    font-size: .5em;
+    margin: -2em;
+}
+
+/* selector hermano siguiente (solo busca el siguiente)*/
+.title-1 + .subtitle {
+    color: var(--color_title1);
+}
+
+.title-2 + .subtitle{
+    color: var(--color_title2);
+}
+/*  */
+
+/*  */
+/* selector hermanos siguientes(busca todos los demas) */
+
+.enabled{
+    display: none;
+}
+
+.check:checked ~ .enabled{
+    display: block;
+}
+
+.check:checked ~ .disabled{
+    display: none;
+}
+/*  */
+
+/*  */
+/* selectores de atributo */
+[type="email"]{
+    border: 1px solid beige;
+}
+
+[required]{
+    border: .1em solid red;
+    margin: 2px;
 }
