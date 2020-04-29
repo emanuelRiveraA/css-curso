@@ -1,4 +1,18 @@
+/* variables css */
+:root{
+    --color:green;
+}
+
+ul *{
+    color: red;
+}
+
 body{
-    background: red;
-    color: white;
+    background:var(--color);
+    margin: 10px;
+}
+
+h1{
+    background: white;
+    color:var(--color);
 }
