@@ -1,0 +1,83 @@
+/* la mejor practica
+es declarar al 
+principio para que el
+width y el heigth no
+se modifiquen cuando se agrega un borde*/
+* , *::before, *::after{
+    box-sizing: border-box;
+}
+
+.box{
+    
+}
+
+/* mejor manera de centrar
+ un elemento de bloque con
+ ancho definido*/
+.box-1{
+    width: 600px;
+    background: lime;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* los bordes se dibujan dentro por que
+se aplica la buena practica del principio*/
+.caja{
+    width: 400px;
+    height: 300px;
+    background: red;
+    margin: 100px auto; /* para centrar horizaontalmente*/
+    border-style: dotted solid dashed groove;
+    border-width: 10px 20px 30px 40px;
+    border-color: black blue chartreuse cyan;
+}
+
+.triangulo{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;/* centrar */
+ 
+    border: 150px solid;/* tiene 150px y solido en los 4 lados */
+    border-color: blue transparent transparent transparent;/* el borde de un lado es azul y los otros transparentes */
+
+}
+
+
+
+/*  */
+/*  */
+.logo{
+    /* variables */
+    --border-radius-x: 60px;
+    --border-radius-y: 100px;
+    padding-top: 0.1px;/* se pone por el colapso de margenes */
+    width: 400px;
+    height: 250px;
+    background: red;
+    margin: 40px auto;/* para poner el play en su lugar */
+    padding-left: 130px;
+
+    /* border-top-right-radius: var(--border-radius-x) 
+    var(--border-radius-y);
+    border-top-left-radius:  var(--border-radius-x) 
+    var(--border-radius-y);
+    border-bottom-right-radius:  var(--border-radius-x) 
+    var(--border-radius-y);
+    border-bottom-left-radius:  var(--border-radius-x) 
+    var(--border-radius-y); */
+                        /* x x x x */          /* y y y y */
+    border-radius:var(--border-radius-x) / var(--border-radius-y);/* es lo mismo que arriba */
+}
+
+.play{
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+    border:75px solid;
+    border-color: transparent transparent transparent white;
+    
+}
+/* 
+ */
+ /*  */
