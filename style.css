@@ -79,3 +79,43 @@ li:hover ul{
     border: .1em solid red;
     margin: 2px;
 }
+/* ^ cuando empieza */
+[href^="https://www.seriespapaya.nu"]{
+    color: black;
+}
+/* $ cuando termina */
+[href$="szg"]{
+    color: yellow;
+}
+
+
+/*  */
+/* el '*' sirve para decir que contiene */
+[class*="button-"]{
+    display: inline-block;
+    margin: 1em;
+    padding: 1em 2em;
+    text-decoration: none;
+    color: wheat;
+    
+}
+
+.button-cta{
+    background: orange;
+}
+
+.button-alert{
+    background: red;
+}
+/*  */
+
+
+/* herencia */
+.mismo{
+    color: red;
+}
+
+ a{
+    color: inherit;
+}
+/*  */
