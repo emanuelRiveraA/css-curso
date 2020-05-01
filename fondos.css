@@ -1,0 +1,70 @@
+/* body{
+    background-color: purple;
+    background-image: url(img/hojas.jpg);
+    background-repeat: no-repeat;
+} */
+
+/* .box{
+    width: 500px;
+    height: 300px;
+    background-image: url(img/snow.jpg);
+    background-repeat: no-repeat;
+    margin: 50px auto;
+    background-clip: content-box;
+    background-origin: content-box;
+    border: 5px solid black;
+    padding: 50px;
+    box-shadow: 0 10px 30px -10px #000;
+
+} */
+
+.box{
+    width: 500px;
+    height: 300px;
+    background-image: url(img/snow.jpg);
+    background-repeat: no-repeat;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px -10px #000;
+    /* background-size:100%; */
+    background-size:cover; /* contain- que la imagen sea 
+    lo mas grande posible pero que quepa en la caja 
+    cover- estira todo lo posible para rellenar */
+}  
+
+/*  */
+.box-2{
+    width: 500px;
+    height: 300px;
+    background-image: url(img/hojas.jpg);
+    background-repeat: no-repeat;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px -10px #000;
+    background-size: 50%;
+    /* background-position: center; */
+    /* background-position: center top; */
+    background-position: bottom 20px right 20px;/* 20px separdos de abajo
+    y 20px separado de la izq */
+} 
+/*  */
+
+/*  */
+body{
+    padding-bottom: 100em;
+    background-image: url(img/vias.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right top;
+
+}
+
+.parallax{
+    padding:10em;
+    color: blanchedalmond;
+    font-size: 2em;
+    text-align: center;
+    background-image: url(img/bride.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
