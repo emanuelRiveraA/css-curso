@@ -23,4 +23,7 @@ h1{
     writing-mode: vertical-lr;
     text-orientation: upright;
     text-shadow: blueviolet ;
+    /* font-weight: bold lighter normal bolder;  */   /* siempre evitar esto */ 
+    font-weight: 112;   /* usar mejor numeros 100 es el mas bajo y 900 el mas alto*/ 
 }
+

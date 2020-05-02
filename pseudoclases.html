@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pseudoclases.css">
+</head>
+<body>
+    <header class="Header">
+        <h1>pseudoclases</h1>
+        <p>las pseudoclases son estilos especiales dependiendo del contexto, posicion
+            o estado
+        </p>
+    </header>
+    <main class="Main">
+        <article>
+            <h2><code>:root</code></h2>
+            <p>nodo principal</p>
+        </article>
+        <article>
+            <h2>:hover</h2> 
+            <p>se presenta cuando el usuario coloca el puntero sobre alhun elemento</p>
+        </article>   
+        <article>
+            <h2>:active</h2> 
+            <p>cubre el caso en el que un elemento esta siendo activado
+                por el usuario.
+                Este es el orden que se debe seguir para declarar las sigs. 
+                pseudoclases si no ninguna funcionará
+                <ol>
+                    <li>:link {...}</li>
+                    <li>:visited {...}</li>
+                    <li>:hover {...}</li>
+                    <li>:active {...}</li>
+                </ol>
+            </p>
+        </article>   
+
+    </main>
+</body>
+</html>
