@@ -23,11 +23,11 @@
             <p>se presenta cuando el usuario coloca el puntero sobre alhun elemento</p>
         </article>   
         <article>
-            <h2>:active</h2> 
+            <h2><code>:active</code></h2> 
             <p>cubre el caso en el que un elemento esta siendo activado
                 por el usuario.
                 Este es el orden que se debe seguir para declarar las sigs. 
-                pseudoclases si no ninguna funcionará
+                pseudoclases si no ninguna funcionará</p>
                 <ol>
                     <li>:link {...}</li>
                     <li>:visited {...}</li>
@@ -36,6 +36,30 @@
                 </ol>
             </p>
         </article>   
+        <article>
+            <h2><code>:target</code></h2> 
+            <p>representa el elemento unico, si existe alguno
+                con un 'id' conincidente con el indentificador
+                de fragemnto de la URL del documento.
+            </p>
+            <p><a href="#modal">Modal en CSS</a></p>            
+        </article>   
+        <article>
+            <h2><code>:nth-child:firts-child:last-child</code></h2> 
+            <ul>
+                li
+            </ul>
+            <p><a href="#modal">Modal en CSS</a></p>            
+        </article>   
+
+
+
+        <div id="modal" class="Modal">
+            <aside class="Modal-box">
+                <h2>Hola soy un bonito modal con CSS</h2>
+                <a href="#">Cerrar</a>
+            </aside>
+        </div>
 
     </main>
 </body>
