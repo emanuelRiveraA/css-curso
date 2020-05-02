@@ -1,0 +1,26 @@
+body{
+    font-size: 2em;
+}
+
+p{
+    margin: 2em;
+    line-height: 1.5;/* esta es la mejor practica para los textos la separacion de las lineas */
+}
+
+span{
+    font-size: .5em;
+    vertical-align: top;
+}
+
+h1{
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-decoration: black solid underline overline;
+    
+}
+
+.pa{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-shadow: blueviolet ;
+}
