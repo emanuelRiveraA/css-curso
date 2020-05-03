@@ -1,0 +1,109 @@
+body{
+    font-size: 2em;
+    margin: 1em;
+}
+
+p:nth-child(2)::first-line{
+    color:red;/* cambia de color la primera linea independientemente del tamañp de pantalla */
+} 
+
+p:nth-child(3):first-letter{
+    font-size: 2.3em;
+    margin-right: .1em;
+    color: red;
+    float: left;
+    line-height: 1;
+    margin: .2em;
+    font-family: serif;
+}
+
+/* EJEMPLO DE ::after y ::before */
+/* los pseudoelementos son inline no se puede aplicar with ni heigth 
+necesita ponerse display:block para aplicarle propiedades como cualquier
+otro elemento*/
+h2::after{
+    content: '<----- ';
+}
+
+h2::before{
+    content: ' ----->';
+}
+
+/* este es otro ejemplo de ::before */
+h3{
+    border: 1px solid #000;
+}
+
+h3::before{
+    content: attr(class);/* imprime el contenido de la clase */
+    display: block;
+    font-size: .5em;
+    background-color: hsla(60, 100%, 50%, .3);
+}
+
+/* se pueden imprimir imagenes con ::before */
+img::before{
+    content: url(https://i.pinimg.com/600x315/1c/49/0a/1c490aa730bac905c902c69d698aedc2.jpg);
+    display: block;
+}
+
+/* elemento quote */
+.cita{
+    quotes: '\201c' '\201d';/* se insertan comillas con otro estilo */
+}
+
+.cita::before{
+    content: open-quote;
+}
+
+.cita::after{
+    content: close-quote;
+}
+
+/* formatear monedas */
+.usd::before{
+    content: '$ ';
+}
+.pen::before{
+    content: 's/ ';
+}
+.cop::before{
+    content: '$ ';
+}
+
+.two-decimals::after{
+    content: '.00';
+}
+
+
+
+/* subrayado animado */
+.subrayado{
+    display: table;/* para ajustarlo */
+}
+
+.subrayado::after{
+    content: '';/* contenido vacio */
+    display: block; /* para poder manipularlo */
+    height: 3px;
+    background-color: red;
+    transform: scale(0,1);
+    transition: transform .25s;
+}
+
+.subrayado:hover::after{
+    transform: scale(1,1);
+}
+
+/* HACK para hacer video responsive */
+.box{
+    /* width: 400px; */
+    background-color: red;
+}
+
+.box::before{
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;/* es estandar 16:9 osea que se agranda 
+    de acuerdo al porcentaje que tenga el ancho*/
+}
