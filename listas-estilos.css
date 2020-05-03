@@ -1,0 +1,29 @@
+ul,ol{
+   list-style: none; 
+    list-style-type: disc;/* muestra puntos */
+    list-style-type: circle;/* muestra circulos */
+    list-style-type: square;/* muestra cuadros */
+    list-style-type: decimal;/* muestra numeros */
+    list-style-type: decimal-leading-zero;/* muestra uncero antes */
+    list-style-type: lower-alpha;/* muestra letras minusculas */
+    list-style-type: upper-alpha;/* muestra letras mayusculas */
+}
+
+
+/* esta es la mejor forma de poner imagenes en las listas */
+article li{
+    list-style: none;
+}
+
+article li::before{
+    content: '';   
+    background: url(https://png.pngtree.com/png-vector/20191007/ourmid/pngtree-green-check-mark-icon-cartoon-style-png-image_1796237.jpg); 
+    background-size: contain;/* se ajusta al contenido */
+    display: inline-block;/* para evitar que salte de linea */
+    width: 1em;
+    height: 1em;
+    margin-right: .15rem;
+}
+
+
+/* EJEMPLO DE CONTADORES */
