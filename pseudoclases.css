@@ -71,6 +71,10 @@ p{
     max-width: var(--max-width);
 }
 
+.Main h2{
+    color: var(--third-color);
+}
+
 .Main article{
     margin-bottom: 1rem;
     padding: 1rem;
@@ -79,8 +83,10 @@ p{
     transition: all .5s ease-out;
 }
 
+
+
 /*  */
-/* aqui se nota el orden */
+/* aqui se nota el orden de :active */
 .Main article:hover{/* No. 3 */
     background-color: var(--accent-color);
     color: var(--dark-color);
@@ -91,9 +97,37 @@ p{
 }
 /*  */
 
-.Main h2{
-    color: var(--third-color);
+
+
+
+/* EJEMPLO DE :nth */
+.Main article:nth-child(3){/* (n) -> pueden ser nuemros o "odd -> par" o "even-> inpar" */
+    background-color: var(--dark-color-alt);/* se cambia el color de fondo al 3er article */
 }
+
+/*  */
+/* se tiene que volver a escribir las pseudoclases para que funcione lo anterior */
+.Main article:nth-child(3):hover{/* No. 3 */
+    background-color: var(--accent-color-alt);
+    color: var(--dark-color-alt);
+}
+
+.Main article:nth-child(3):active{/* No. 4 */
+    background-color: var(--second-color-alt);/* si dejamos presionado cambia de color */
+    color: var(--dark-color-alt);
+}
+
+.Main article:first-child{/* en el 1° article la letra se vuelve mas grande*/
+    font-size: 1.25rem;
+}
+
+.Main article:last-child{/* en el ultimo article la letra se vuelve pequeña */
+    font-size: .75rem;
+}
+/*  */
+
+
+
 
 
 /* EJEMPLO DE TARGET */
@@ -115,6 +149,7 @@ p{
 }
 
 .Modal-box{
+    position: fixed;/* se queda en el mismo lugar */
     width: 40%;
     height: 50vh;
     display: flex;
@@ -122,6 +157,43 @@ p{
     justify-content: center;
     align-items: center;
     background-color: var(--accent-color);
+}
+/*  */
+
+
+/*  */
+.Modal form{
+    display: flex;
+    flex-direction: column;
+}
+/* EJEMPLO DE PSEUDOCLASE :NOT */
+.Modal input:not([type="submit"]){/* le aplica los estilos menos al boton */
+    margin-bottom: .5rem;
+    padding: .5rem;
+    border:thin solid var(--second-color);
+    background-color: var(--body-bg);
+    color: var(--first-color);
+}
+
+.Modal input[type="submit"]{
+    width: 80%;
+    margin: 0 auto .5rem;
+    padding: .5rem .25rem;
+    border: 0;
+    border-radius: .25rem;
+    background-color: var(--first-color);
+    color: var(--body-bg);
+    transition: all .3s ease-in;
+}
+
+.Modal input[type="submit"]:hover{
+    background-color: var(--dark-color);
+}
+/*  */
+
+/* EJEMPLO :EMPTY */
+p:empty{
+    margin-bottom: 0;/* con esto se elimina el espacio creado por los parrafos vacios */
 }
 /*  */
 

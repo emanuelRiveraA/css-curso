@@ -45,22 +45,57 @@
             <p><a href="#modal">Modal en CSS</a></p>            
         </article>   
         <article>
-            <h2><code>:nth-child:firts-child:last-child</code></h2> 
+            <h2><code>:nth-child :firts-child :last-child</code></h2> 
             <ul>
-                li
-            </ul>
-            <p><a href="#modal">Modal en CSS</a></p>            
-        </article>   
-
-
-
-        <div id="modal" class="Modal">
+                <li><code>:nth-child</code>: selecciona el elemento indicado que sea el enecimo hijo de su elemento padre</li>
+                <li><code>:firts-child</code>: selecciona el elemento indicado que sea el primer hio se duelemento padre.</li>
+                <li><code>:last-child</code>: selecciona el elemento indicado que sea el ultimo hijode su elemento padre.</li>
+            </ul>         
+        </article> 
+        <div id="modal" class="Modal"> <!-- este elemento tambien cuenta como hijo cuando se usa nth-child -->
             <aside class="Modal-box">
                 <h2>Hola soy un bonito modal con CSS</h2>
+                <form action="">
+                    <input type="text" placeholder="email">
+                    <input type="password" placeholder="password">
+                    <input type="submit">
+                </form>
                 <a href="#">Cerrar</a>
             </aside>
-        </div>
-
+        </div>  
+        <article>
+            <h2><code>:nth-of-type :first-of-type :last-of-type</code></h2> 
+            <ul>
+                <li><code>:nth-of-type</code>: selecciona el elemento indicado que sea el enecimo hijo en su tipo sin importar la jerarquia dentro del elemento</li>
+                <li><code>:first-of-type</code>: selecciona el elemento indicado que sea el primer hijo en su tipo sin importar la jerarquia dentro del elemento padre.</li>
+                <li><code>:last-of-type</code>: selecciona el elemento indicado que se el ultimo hijo en su tipo sin importar la jerarquia dentro del elemento padre.</li>
+            </ul>         
+        </article>   
+        <article>
+            <h2><code>:not</code></h2> 
+            <p>La pseudo-clase CSS de negación, not(x), es una notacion funcional 
+                que toma un selector simple X como argumento. Coincide con un elemento que no esta
+                representado que no está representado por el argumento. X no debe 
+                contener otro selector de negación
+            </p>       
+        </article>   
+        <article>
+            <h2><code>:empty</code></h2> 
+            <!-- a continuación se gragan estos parrafos pero se generan espacion y hay que quitarlos con :empty -->
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>            
+            <p>corresponde a un elemento sin ningún nodo hijo. Solo cuando hay nodos de elemento o texto con uno
+                o mas caracteres dentro del elemento ese se convierte en no vacio
+            </p>       
+        </article>   
     </main>
 </body>
 </html>
