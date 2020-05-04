@@ -1,3 +1,4 @@
+
 ul,ol{
    list-style: none; 
     list-style-type: disc;/* muestra puntos */
@@ -11,11 +12,11 @@ ul,ol{
 
 
 /* esta es la mejor forma de poner imagenes en las listas */
-article li{
+.list-image li{
     list-style: none;
 }
 
-article li::before{
+.list-image li::before{
     content: '';   
     background: url(https://png.pngtree.com/png-vector/20191007/ourmid/pngtree-green-check-mark-icon-cartoon-style-png-image_1796237.jpg); 
     background-size: contain;/* se ajusta al contenido */
@@ -27,3 +28,61 @@ article li::before{
 
 
 /* EJEMPLO DE CONTADORES */
+.chapters{
+    counter-reset: chapters;/* crea un contador y tambien lo resetea 
+    y en sí es como una variable*/
+}
+
+.chapter{
+    counter-increment: chapter;/* incrementa la variable como programacion */
+}
+
+.chapter::before{
+    content: counter(chapter) '. ';/* imprime los valores */
+    color: red;
+}
+
+
+/* EJEMPLO DE LISTA ANIDADA */
+.Contador-decimal ol{
+    counter-reset: list;
+}
+
+.Contador-decimal li{
+    counter-increment: list;
+    list-style: none;
+}
+
+.Contador-decimal li::before{
+    content: counters(list, '.') '. ';/* aqui es counters */
+    font-size: 0.75em;
+    margin-right: .5em;
+    color: lightcoral;
+}
+
+
+
+/*EJEMPLO DE CONTADORES AVANZADOS  */
+.temary{
+    counter-reset: classes;
+}
+
+.class{
+    counter-increment: classes;
+    counter-reset: topics;
+}
+
+.class-title::before{
+    content: counter(classes) '. ';
+}
+
+.class-topic{
+    counter-increment: topics;
+    padding-left: .5em;
+}
+
+.class-topic::before{
+    content: counter(topics) '.' counter(topics);
+    color: lightcoral;
+    font-size: .75em;
+}
