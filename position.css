@@ -1,0 +1,49 @@
+
+.p1{
+    color:red;
+    float: left;
+    width: 50%;
+}
+.p2{
+    color:green;
+    float: right;
+    width: 50%;
+}
+.p3{
+    color:blue;
+
+}
+
+/*  position: static | relative | absolute | fixed |sticky
+    por defecto es static
+
+    propiedades offset: mueven un elemento posicionado
+    segun el borde indicado
+        *top
+        *rigth
+        *left
+        *bottom
+*/
+
+/* positio relative: su referencia es su pocision inicial 
+   aplicar posicion relative a un elemento no modifica en nada su layout
+    al moverlo con las propiedades offset, reserva su espacio
+   */
+  
+.pa1{
+    position: relative;
+    top: 100px;
+}
+
+/*
+    position absolute: pierde su posicion en el fluejo 
+    y no reserva su espacio
+    *si tenia dimensiones fijas se mantienen, 
+    si tenia dimesiones automaticas, se ajustarán a su contenido
+    * su referencia es su ancestro pocisionado mas cercano
+    */
+ h1{
+     background-color: yellow;
+     width: 50%;
+    position: absolute;
+}
