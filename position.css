@@ -36,14 +36,19 @@
 }
 
 /*
-    position absolute: pierde su posicion en el fluejo 
+    position absolute: pierde su posicion en el flujo 
     y no reserva su espacio
     *si tenia dimensiones fijas se mantienen, 
     si tenia dimesiones automaticas, se ajustarán a su contenido
     * su referencia es su ancestro pocisionado mas cercano
     */
- h1{
+.absolute{
      background-color: yellow;
      width: 50%;
     position: absolute;
 }
+
+/* fixed: fijo(no se mueve con el scroll), relativo al vierport -> parte visible de la pagina
+    se ingnora en el flujo
+    sus dimensiones automaticas se restringen a su contenido
+*/
